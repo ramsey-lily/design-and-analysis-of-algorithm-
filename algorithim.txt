@@ -1,0 +1,25 @@
+Algorithm Merge(A, B, m, n)
+    i = 1;  
+    j = 1;  
+    k = 1;  
+    
+    //Merge elements from A and B
+    while (i <= m && j <= n) do
+        if (A[i] < B[j]) then
+            C[k++] = A[i++];
+        else
+            C[k++] = B[j++];
+        end if
+    end while
+    
+    //Append remaining elements of A (if any)
+    while (i <= m) do
+        C[k++] = A[i++];
+    end while
+    
+    //Append remaining elements of B (if any)
+    while (j <= n) do
+        C[k++] = B[j++];
+    end while
+    
+    return C
